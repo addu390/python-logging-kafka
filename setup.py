@@ -23,7 +23,7 @@ TEST_REQUIRES = [
 
 setup(name='python-logging-kafka',
       version='1.0.0',
-      url='https://github.com/albertomr86/python-logging-rabbitmq',
+      url='https://github.com/addu390/python-logging-kafka',
       description='Kafka log producer from Python/Django',
       long_description=README,
       keywords='logging kafka logs',
