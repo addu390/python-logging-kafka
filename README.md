@@ -3,13 +3,14 @@
 Log Handler to ship logs to Kafka Producer. Compatible with Django.
 
 #### Installation
-- Install using PIP: `pip install python_logging_kafka`
+- Install using PIP: `pip install -i https://test.pypi.org/simple/ python-logging-kafka`
+- (Work In Progress): https://test.pypi.org/project/python-logging-kafka/
 
 ### Versions
 
 | Version      | Dependency             |
 |--------------|------------------------|
-| &gt;= 1.x    |  kafka-python>=2.0.1   |
+| &gt;= 1.x    |  kafka-python>=2.0.0   |
 
 
 #### Handlers
@@ -18,7 +19,7 @@ Log Handler to ship logs to Kafka Producer. Compatible with Django.
 
 
 #### Standalone Python
-- Refer `example.py`
+- Refer `python_logging_kafka/example.py`
 ```
 class Main:
 
