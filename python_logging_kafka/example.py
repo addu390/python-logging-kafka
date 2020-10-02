@@ -1,25 +1,7 @@
-### python-logging-kafka
-
-Log Handler to ship logs to Kafka Producer. Compatible with Django.
-
-#### Installation
-- Install using PIP: `pip install python_logging_kafka`
-
-### Versions
-
-| Version      | Dependency             |
-|--------------|------------------------|
-| &gt;= 1.x    |  kafka-python>=2.0.1   |
+import logging
+from python_logging_kafka import KafkaHandler
 
 
-#### Handlers
-- The package has a built in handler for Kafka: `from python_logging_kafka import KafkaHandler`
-- KafkaHandler is a basic handler for sending logs to Kafka. Every record will be delivered using the exchange configured.
-
-
-#### Standalone Python
-- Refer `example.py`
-```
 class Main:
 
     def __init__(self):
@@ -36,10 +18,10 @@ class Main:
         ch.setFormatter(formatter)
         self.logger.addHandler(ch)
 
-        f1 = logging.FileHandler("pylog.log")
+        f1 = logging.FileHandler("pyblog.log")
         self.logger.addHandler(f1)
 
-        kh = KafkaHandler('localhost:9092', "pylog")
+        kh = KafkaHandler('localhost:9092', "pyblog")
         kh.setLevel(logging.INFO)
         self.logger.addHandler(kh)
 
@@ -52,4 +34,3 @@ class Main:
 if __name__ == '__main__':
     main = Main()
     main.run()
-```
