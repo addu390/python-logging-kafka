@@ -4,4 +4,3 @@ __pycache__
 python_logging_kafka.egg-info
 dist
 build
-consumer.py
