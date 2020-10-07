@@ -18,10 +18,10 @@ class Main:
         ch.setFormatter(formatter)
         self.logger.addHandler(ch)
 
-        f1 = logging.FileHandler("pyblog.log")
+        f1 = logging.FileHandler("pylog.log")
         self.logger.addHandler(f1)
 
-        kh = KafkaHandler('localhost:9092', "pyblog")
+        kh = KafkaHandler('localhost:9092', "pylog")
         kh.setLevel(logging.INFO)
         self.logger.addHandler(kh)
 
